@@ -1,0 +1,1 @@
+"Server=VICDSO;Database=BD_EntertainSync;Trusted_Connection=True;MultipleActiveResultSets=true"
