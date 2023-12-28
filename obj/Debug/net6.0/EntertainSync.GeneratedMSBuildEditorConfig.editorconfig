@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\vicds\OneDrive\Área de Trabalho\PROJETOS GIT\EntertainSync
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/vicds/OneDrive/Área de Trabalho/PROJETOS GIT/EntertainSync/Views/Concluidos/Filmes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uY2x1aWRvc1xGaWxtZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vicds/OneDrive/Área de Trabalho/PROJETOS GIT/EntertainSync/Views/Concluidos/Livros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uY2x1aWRvc1xMaXZyb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vicds/OneDrive/Área de Trabalho/PROJETOS GIT/EntertainSync/Views/Concluidos/Series.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uY2x1aWRvc1xTZXJpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/vicds/OneDrive/Área de Trabalho/PROJETOS GIT/EntertainSync/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
