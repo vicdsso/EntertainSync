@@ -1,187 +1,138 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<EntertainSync.Models.Home>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div id="alphabet-nav" class="alphabet-nav"></div>
+
+
+<div id="banner">
+    <img src="~/img/banne.png" class="banner" width="100%" height="370" alt="Banner">
+
+    <div id="category-buttons" class="botoes">
+       
+        <button id="movies-btn" onclick="changeCategory(0)" >Filmes</button>
+        <button id="series-btn" onclick="changeCategory(1)">Séries</button>
+        <button id="books-btn" onclick="changeCategory(2)">Livros</button>
+    </div>
+</div>
+
+<div>
+    <a href="#" onclick="verTodos()">Ver todos</a>
+</div>
+
+<br>
+
+<!-- Adicione o botão Adicionar e a chamada para a função addEntertainment -->
+<p>
+    <a class="btn btn-primary" onclick="addEntertainment()" asp-action="Create">Adicionar&nbsp;<span class="fa fa-plus"></span></a>
+</p>
+
+
+
+@* Adicionado entretenimento na Home Page *@
+
+@foreach (var item in Model)
+{
+    <section  class="col">
+
+        <div class="col d-flex justify-content-">
+
+            <a asp-action="Edit" asp-route-id="@item.Id"><img src="~/img/editar.png" width="15px " height="15px"></a>
+            <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Deseja excluir?');"><img src="~/img/excluir.png" width="15px " height="15px"></a>
+
+        </div>
+        <div class="estruturaPai">
+            <div class="estrutura">
+
+                <div class="row">
+                    <div class="text-center">
+
+                        <h5 class="titulo">
+                            @Html.DisplayFor(modelItem => item.Titulo)
+                        </h5>
+                    </div>
+                    <div id="container">
+                        <!-- Menu de opções -->
+                        <form action="#">
+                            <select name="Status" id="opcoes">
+                                <option value="naoIniciado">Não iniciado</option>
+                                <option value="emAndamento">Andamento</option>
+                                <option value="Concluido">Concluído</option>
+                            </select>
+                        </form>
+
+                        <!-- Estrelas -->
+                        <div id="estrelas-container">
+                            <span class="estrela" data-rating="1">&#9734;</span>
+                            <span class="estrela" data-rating="2">&#9734;</span>
+                            <span class="estrela" data-rating="3">&#9734;</span>
+                            <span class="estrela" data-rating="4">&#9734;</span>
+                            <span class="estrela" data-rating="5">&#9734;</span>
+                        </div>
+                    </div>
+
+                    <p class="link">
+                        <a href="@Html.DisplayFor(modelItem => item.Link)">@Html.DisplayFor(modelItem => item.Link)</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="estruturaIMG">
+                <img src="@item.LinkImagem" alt="Imagem" class="linkImagem">
+
+            </div>
+        </div>
+    </section>
+
 }
 
 
+<!--arrumar a logica do js estrelas-->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Inicializa as estrelas como desativadas
+        $(".estrela").prop("disabled", true);
 
-<center>
+        // Manipula a mudança no menu de opções
+        $("#opcoes").change(function () {
+            var status = $(this).val();
 
-    <div id="alphabet-nav" class="alphabet-nav"></div>
+            // Habilita ou desabilita as estrelas com base no status
+            if (status === "Concluido") {
+                $(".estrela").prop("disabled", false);
 
+                // Manipula o clique nas estrelas
+                $(".estrela").click(function () {
+                    var rating = $(this).data("rating");
 
-
-    <div id="banner">
-        <img src="~/img/banne.png" class="banner" width="100%" height="370" alt="Banner">
-
-        <div id="category-buttons" class="botoes">
-            <button id="movies-btn" onclick="changeCategory('movies')" class="active">Filmes</button>
-            <button id="series-btn" onclick="changeCategory('series')">Séries</button>
-            <button id="books-btn" onclick="changeCategory('books')">Livros</button>
-        </div>
-    </div>
-
-    @*  banner, botoes e add  *@
-    <style>
-
-
-        .banner {
-            padding-top: 4%;
-            display: block;
-        }
-
-
-        .botoes {
-            position: absolute;
-            top: 47.2%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-        }
-
-        button {
-            margin: 0 10px;
-            padding: 10px 15px;
-            background-color: #f7601e;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-
-            button.active {
-                background-color: #9b071e;
-                color: #fff;
+                    // Simula a ação de selecionar/deselecionar estrelas
+                    $(".estrela").each(function () {
+                        var currentRating = $(this).data("rating");
+                        if (currentRating <= rating) {
+                            $(this).html("&#9733;"); // Estrela preenchida
+                        } else {
+                            $(this).html("&#9734;"); // Estrela vazia
+                        }
+                    });
+                });
             }
 
-        #add {
-            margin-left: 100px;
-            margin-top: 80px;
-            /*   width: 120px;
-                    height: 170px;
-                    background-color: #f7601e;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center; */
-            cursor: pointer;
-        }
+            else {
+                $(".estrela").prop("disabled", true);
+            }
+        });
+    });
 
-        /*  .icone-mais{
-                    width: 50px;
-                    height: 50px; } */
-    </style>
-
-</center>
-
-@* add entretenimento *@
-
-
-<div id="add" data-bs-target="#exampleModal" data-bs-toggle="modal">
-    <button type="button" class="btn btn-primary">
-        Adicionar
-    </button>
-    @*  <img class="icone-mais"  src="~/img/mais.png"> *@
-
-</div>
-
-<!---->
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Adicionar</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
+    $(document).ready(function () {
+        $("#linkImagem").on("input", function () {
+            var linkImagem = $(this).val();
+            $("#imagem-preview").attr("src", linkImagem);
+        });
+    });
+</script>
 
 
 
-
-
-                <form asp-action="Index">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                    <div class="form-group">
-
-                        <label @* asp-for="Titulo" *@ class="control-label"></label>
-                        <h4>Título*</h4>
-                        <input @* asp-for="Titulo" *@ class="form-control" />
-                        <span @* asp-validation-for="Titulo "*@ class="text-danger"></span>
-                    </div>
-
-
-
-
-                    <div class="form-group">
-
-                        <label @* asp-for="Titulo" *@ class="control-label"></label>
-                        <h4>Link</h4>
-                        <input @* asp-for="Titulo" *@ class="form-control" />
-                        <span @* asp-validation-for="Titulo "*@ class="text-danger"></span>
-                    </div>
-
-
-
-
-
-                    <div class="form-group row mt-3">
-                        <label class="labels col-md-12">Upload de imagem* </label>
-                        <div class="col-md-12">
-                            <input type="file" class="form-control-file">
-                            <small class="form-text text-muted">Escolha uma imagem para capa.</small>
-                        </div>
-                    </div>
-
-                    <center>
-                        <div class="form-group">
-                            <input type="submit" id="botao-center" value="Adicionar" class="btn btn-primary" />
-                        </div>
-                    </center>
-                </form>
-
-
-            </div>
-        </div>
-
-
-    </div>
-
-</div>
-
-
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
