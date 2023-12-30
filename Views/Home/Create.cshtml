@@ -18,15 +18,6 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="Link" class="control-label"></label>
-                <input asp-for="Link" class="form-control" />
-                <span asp-validation-for="Link" class="text-danger"></span>
-            </div>
-
-        
-
-
-            <div class="form-group">
                 <label class="labels col-md-12">Link da Imagem</label>
                 <div class="col-md-12">
                     <input type="text" asp-for="LinkImagem" class="form-control" required>
@@ -34,9 +25,24 @@
                 </div>
             </div>
 
+            <div class="form-group">
+                <label asp-for="Link" class="control-label"></label>
+                <input asp-for="Link" class="form-control" />
+                <span asp-validation-for="Link" class="text-danger"></span>
+            </div>
 
+       
 
-
+            <div id="container">
+                <!-- Menu de opções -->
+                <form action="#">
+                    <select name="Categoria" id="opcoes">
+                        <option value="Filme">Filme</option>
+                        <option value="Livro">Livros</option>
+                        <option value="Serie">Serie</option>
+                    </select>
+                </form>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Adicionar entretenimento" class="btn btn-primary" />
             </div>
