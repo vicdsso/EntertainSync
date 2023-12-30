@@ -31,25 +31,30 @@
                 <span asp-validation-for="Link" class="text-danger"></span>
             </div>
 
-       
+
 
             <div id="container">
-                <!-- Menu de opções -->
-                <form action="#">
-                    <select name="Categoria" id="opcoes">
-                        <option value="Filme">Filme</option>
-                        <option value="Livro">Livros</option>
-                        <option value="Serie">Serie</option>
-                    </select>
-                </form>
+             
+              
+                    <div class="form-group">
+                        <label asp-for="Category" class="control-label"></label>
+                        <select asp-for="Category" class="form-control" id="opcoes">
+                            <option value="Filme">Filme</option>
+                            <option value="Livro">Livros</option>
+                            <option value="Serie">Serie</option>
+                        </select>
+                        <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
             </div>
+           
             <div class="form-group">
                 <input type="submit" value="Adicionar entretenimento" class="btn btn-primary" />
             </div>
            
         </form>
     </div>
-</div>
+    </div>
+
 
 <div>
     <a asp-action="Index">Voltar</a>
