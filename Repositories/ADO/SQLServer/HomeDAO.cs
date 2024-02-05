@@ -20,7 +20,7 @@ namespace EntertainSync.Repositories.ADO.SQLServer
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select id, titulo, link, linkImagem from adicionar;";
+                    command.CommandText = "select id, titulo, link, linkImagem, categoria from adicionar;";
 
                     SqlDataReader dr = command.ExecuteReader();
 
@@ -32,6 +32,7 @@ namespace EntertainSync.Repositories.ADO.SQLServer
                         adicionar.Titulo = dr["titulo"].ToString();
                         adicionar.Link = dr["link"].ToString();
                         adicionar.LinkImagem = dr["linkImagem"].ToString();
+                        adicionar.Categoria = dr["categoria"].ToString();
 
                         adicionadas.Add(adicionar);
                     }
@@ -63,7 +64,7 @@ namespace EntertainSync.Repositories.ADO.SQLServer
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select id, titulo, link, linkImagem from adicionar;";
+                    command.CommandText = "select id, titulo, link, linkImagem, categoria from adicionar;";
 
                     SqlDataReader dr = command.ExecuteReader();
 
@@ -75,7 +76,7 @@ namespace EntertainSync.Repositories.ADO.SQLServer
                         adicionar.Titulo = dr["titulo"].ToString();
                         adicionar.Link = dr["link"].ToString();
                         adicionar.LinkImagem = dr["linkimagem"].ToString();
-                        
+                        adicionar.Categoria = dr["categoria"].ToString();
 
                         adicionadas.Add(adicionar);
                     }
@@ -99,7 +100,7 @@ namespace EntertainSync.Repositories.ADO.SQLServer
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select id, titulo, link, linkImagem from adicionar where id=@id;";
+                    command.CommandText = "select id, titulo, link, linkImagem, categoria from adicionar where id=@id;";//acho que no js vou ter que colocar id =@id
                     command.Parameters.Add(new SqlParameter("@id", System.Data.SqlDbType.Int)).Value = id;
 
                     SqlDataReader dr = command.ExecuteReader();
@@ -110,7 +111,7 @@ namespace EntertainSync.Repositories.ADO.SQLServer
                         adicionar.Titulo = dr["titulo"].ToString();
                         adicionar.Link = dr["link"].ToString();
                         adicionar.LinkImagem = dr["linkimagem"].ToString();
-
+                        adicionar.Categoria = dr["categoria"].ToString();
                     }
                 }
             }
@@ -127,10 +128,11 @@ namespace EntertainSync.Repositories.ADO.SQLServer
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "update adicionar set titulo = @titulo, link, linkImagem = @link where id=@id;";
+                    command.CommandText = "update adicionar set titulo = @titulo, link, linkImagem, categoria = @link where id=@id;";
                     command.Parameters.Add(new SqlParameter("@titulo", System.Data.SqlDbType.VarChar)).Value = adicionar.Titulo;
                     command.Parameters.Add(new SqlParameter("@link", System.Data.SqlDbType.VarChar)).Value = adicionar.Link;
                     command.Parameters.Add(new SqlParameter("@linkImagem", System.Data.SqlDbType.VarChar)).Value = adicionar.LinkImagem;
+                    command.Parameters.Add(new SqlParameter("@categoria", System.Data.SqlDbType.VarChar)).Value = adicionar.Categoria;
                     command.Parameters.Add(new SqlParameter("@id", System.Data.SqlDbType.Int)).Value = id;
 
                     command.ExecuteNonQuery();
@@ -148,11 +150,12 @@ namespace EntertainSync.Repositories.ADO.SQLServer
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "insert into adicionar (titulo, link, linkImagem) values (@titulo,@link, @linkImagem); select convert(int,@@identity) as id;;";
+                    command.CommandText = "insert into adicionar (titulo, link, linkImagem, categoria) values (@titulo,@link, @linkImagem, @categoria); select convert(int,@@identity) as id;;";
 
                     command.Parameters.Add(new SqlParameter("@titulo", System.Data.SqlDbType.VarChar)).Value = adicionar.Titulo;
                     command.Parameters.Add(new SqlParameter("@link", System.Data.SqlDbType.VarChar)).Value = adicionar.Link;
                     command.Parameters.Add(new SqlParameter("@linkImagem", System.Data.SqlDbType.VarChar)).Value = adicionar.LinkImagem;
+                    command.Parameters.Add(new SqlParameter("@categoria", System.Data.SqlDbType.VarChar)).Value = adicionar.Categoria;
 
                     adicionar.Id = (int)command.ExecuteScalar(); 
                         }

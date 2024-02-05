@@ -21,7 +21,7 @@ namespace EntertainSync.Models
 
         
         [Required(ErrorMessage = "Campo Categoria é obrigatório!", AllowEmptyStrings = false)]
-        public string Category { get; set; }
+        public string Categoria { get; set; }
 
         public Home()
         {
@@ -29,7 +29,7 @@ namespace EntertainSync.Models
             this.Titulo = string.Empty;
             this.Link = string.Empty;
             this.LinkImagem = string.Empty;
-            this.Category = string.Empty;
+            this.Categoria = string.Empty;
         }
     }
 }
