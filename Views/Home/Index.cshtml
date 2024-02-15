@@ -4,20 +4,43 @@
     ViewData["Title"] = "Index";
 }
 
+
+
+
+
 <div id="alphabet-nav" class="alphabet-nav"></div>
 
 
-<div id="banner">
-    <img src="~/img/banne.png" class="banner" width="100%" height="370" alt="Banner">
+<br>
+<br>
+<br>
+<br>
 
-    <div id="category-buttons" class="botoes">
-       
-        <button id="movies-btn" onclick="changeCategory(0)" >Filmes</button>
-        <button id="series-btn" onclick="changeCategory(1)">Séries</button>
-        <button id="books-btn" onclick="changeCategory(2)">Livros</button>
-    </div>
-</div>
+<br>
 
+
+
+
+<script>
+    //barra alfabetica
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        var alphabetNav = document.getElementById("alphabet-nav");
+        var navbar = document.querySelector(".navbar");
+
+        if (window.pageYOffset > 100) { // 100 é a altura em pixels do cabeçalho
+            alphabetNav.classList.add("fixed");
+            navbar.classList.add("fixed");
+        } else {
+            alphabetNav.classList.remove("fixed");
+            navbar.classList.remove("fixed");
+        }
+    }
+
+
+
+</script>
 <div>
     <a href="#" onclick="verTodos()">Ver todos</a>
 </div>
@@ -87,7 +110,32 @@
     </section>
 
 }
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <!--arrumar a logica do js estrelas-->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

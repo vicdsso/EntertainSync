@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\EntertainSync.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\css\\icones funcionado.txt",
+      "PackagePath": "staticwebassets\\css\\icones funcionado.txt"
+    },
+    {
       "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -13,20 +17,48 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\banne.png",
-      "PackagePath": "staticwebassets\\img\\banne.png"
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\icone\\concluido.cor.png",
+      "PackagePath": "staticwebassets\\img\\icone\\concluido.cor.png"
     },
     {
-      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\editar.png",
-      "PackagePath": "staticwebassets\\img\\editar.png"
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\icone\\concluido.png",
+      "PackagePath": "staticwebassets\\img\\icone\\concluido.png"
     },
     {
-      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\link img.txt",
-      "PackagePath": "staticwebassets\\img\\link img.txt"
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\icone\\editar.png",
+      "PackagePath": "staticwebassets\\img\\icone\\editar.png"
     },
     {
-      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\mais.png",
-      "PackagePath": "staticwebassets\\img\\mais.png"
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\icone\\filme.cor.png",
+      "PackagePath": "staticwebassets\\img\\icone\\filme.cor.png"
+    },
+    {
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\icone\\filme.png",
+      "PackagePath": "staticwebassets\\img\\icone\\filme.png"
+    },
+    {
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\icone\\livro.cor.png",
+      "PackagePath": "staticwebassets\\img\\icone\\livro.cor.png"
+    },
+    {
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\icone\\livro.png",
+      "PackagePath": "staticwebassets\\img\\icone\\livro.png"
+    },
+    {
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\icone\\serie.cor.png",
+      "PackagePath": "staticwebassets\\img\\icone\\serie.cor.png"
+    },
+    {
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\icone\\serie.png",
+      "PackagePath": "staticwebassets\\img\\icone\\serie.png"
+    },
+    {
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\icone\\xicara-de-cafe.cor.png",
+      "PackagePath": "staticwebassets\\img\\icone\\xicara-de-cafe.cor.png"
+    },
+    {
+      "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\img\\icone\\xicara-de-cafe.png",
+      "PackagePath": "staticwebassets\\img\\icone\\xicara-de-cafe.png"
     },
     {
       "Id": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\js\\site.js",

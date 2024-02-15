@@ -20,6 +20,10 @@ namespace EntertainSync.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            // Define uma ViewBag para indicar que esta é a página inicial
+            ViewBag.IsHomePage = true;
+
+            // Retorna a view correspondente à página inicial e passa os dados necessários
             return View(repository.getAll());
         }
 

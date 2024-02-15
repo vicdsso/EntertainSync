@@ -1,6 +1,7 @@
+/*home*/
 
-
-/*Ìcones */
+/* Estilizando os √≠cones */
+/* Estilizando os √≠cones */
 .icons {
     display: flex;
     justify-content: space-between;
@@ -10,44 +11,47 @@
 .icon {
     text-align: center;
     cursor: pointer;
-    position: relative; /* Adicionado para o efeito de sobreposiÁ„o das imagens */
+    position: relative; /* Adicionado para o efeito de sobreposi√ß√£o das imagens */
 }
 
     .icon img {
-        width: 50px; /* Ajuste o tamanho dos Ìcones conforme necess·rio */
+        width: 50px; /* Ajuste o tamanho dos √≠cones conforme necess√°rio */
         height: auto;
-        filter: none; /* Mantendo as imagens coloridas inicialmente */
-        transition: filter 0.3s; /* Adicionando uma transiÁ„o suave para a mudanÁa da imagem */
-    }
-
-    /* Efeito ao passar o mouse sobre o Ìcone */
-    .icon:hover img {
         filter: grayscale(100%); /* Convertendo para preto e branco */
+        transition: filter 0.3s; /* Adicionando uma transi√ß√£o suave para a mudan√ßa da imagem */
+    }
+
+    /* Efeito ao passar o mouse sobre o √≠cone */
+    .icon:hover img {
+        filter: none; /* Removendo a escala de cinza */
     }
 
 
 
 
 
+    /* Efeito ao passar o mouse sobre o √≠cone */
+    /*.icon:hover {
+        transform: translateY(-5px);
+        filter: brightness(1.2);
+    }*/
 
-/*banner*/
+    /* Adiciona uma transi√ß√£o suave ao redimensionar o √≠cone */
+    /*.icon img {
+        transition: transform 0.3s;
+    }*/
+
+ 
+
+/*home*/
 
 header {
-    padding: 10px 200px;
-    background-color: #eafdfc;
-}
-
-.banner-frase1, .banner-frase2{
-    margin-left:100px;
-    
-}
-
-.banner-frase1 {
-    margin-top: 50px;
+    padding: 10px;
+  
 }
 
 
-/*barra alfabetica*/
+
 .alphabet-nav {
     display: flex;
     gap: 10px;
@@ -72,11 +76,11 @@ header {
         background-color: #555;
     }
 
-/* Estilos para a barra alfabÈtica quando estiver fixa no topo */
+/* Estilos para a barra alfab√©tica quando estiver fixa no topo */
 .alphabet-nav.fixed {
     position: fixed;
     top: 0;
-    z-index: 1000; /* Certifique-se de que a barra alfabÈtica fique sobreposta a outros elementos */
+    z-index: 1000; /* Certifique-se de que a barra alfab√©tica fique sobreposta a outros elementos */
 }
 
 /* Estilos para a navbar quando estiver fixa no topo */
@@ -93,7 +97,7 @@ header {
     margin-bottom: 5px;
 }
 
-/* Estilize o menu de opÁıes */
+/* Estilize o menu de op√ß√µes */
 #opcoes {
     width: 85%;
     font-size: 17px;
@@ -102,7 +106,7 @@ header {
 /* Estilize as estrelas */
 .estrela {
     cursor: pointer;
-    font-size: 17px; /* Ajuste o tamanho conforme necess·rio */
+    font-size: 17px; /* Ajuste o tamanho conforme necess√°rio */
 }
 
 
@@ -121,12 +125,11 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-
 .row {
     margin-left: 10px;
     margin-top: 10px;
     display: flex; /* Adicione a propriedade flex para permitir que as estruturas se alinhem lado a lado */
-    flex-wrap: wrap; /* Adicione a propriedade wrap para que as estruturas quebrem para a prÛxima linha */
+    flex-wrap: wrap; /* Adicione a propriedade wrap para que as estruturas quebrem para a pr√≥xima linha */
 }
 
 .estruturaPai {
@@ -136,7 +139,7 @@ body {
     display: flex;
     margin-bottom: 20px;
     border-radius: 5px;
-    margin-right: 10px; /* Adicione margem ‡ direita para criar espaÁo entre as estruturas */
+    margin-right: 10px; /* Adicione margem √† direita para criar espa√ßo entre as estruturas */
 }
 
 .estruturaIMG {
