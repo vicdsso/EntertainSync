@@ -1,15 +1,6 @@
-
-Pagina concluidos vai ter?
-se eu for colocar preciso passar os entretenimentos quando o status estiver concluido pra pagina conlcuido na sua respectiva categoria
-
-no form create escolher a categoria pa separar dinamicamente ???? vai ter????
+form modal?????
 
 
-barra alafabetica funcioando
-
-seção botoes nao esta funcionado nem com bomba, pensar em outro jeito, pensei no user escolher a seçõa no form...
-
-atualizar o create pra modal
 <!---->
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
