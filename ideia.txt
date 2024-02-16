@@ -1,0 +1,14 @@
+Formulários Específicos: Criaremos formulários individuais para adicionar livros, filmes e séries.
+
+Botão "Adicionar Entretenimento": Ao invés de redirecionar diretamente, abriremos um modal com opções para adicionar livros, filmes ou séries.
+
+Redirecionamento Automático: Quando o usuário clicar em "Adicionar Entretenimento" em uma página específica, como a de filmes, ele será direcionado diretamente para o formulário de criação de filmes.
+
+Modal de Seleção: Um modal simples com 3 opções para selecionar entre adicionar livros, filmes ou séries.
+
+Personalização dos Formulários: Cada formulário solicitará informações específicas para o tipo de entretenimento escolhido.
+
+Criar o design e o wireframe para a página "Concluídos".
+
+Aprimorar o wireframe da página home: Adicionar seções adicionais, como favoritos, entretenimento concluído, metas para 2024 e alguns dos meus comentários/anotações.
+
