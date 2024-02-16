@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "x+LpQ+Oq63RHH5dNX8fMfUgX+uWsUG+CAjY5QWAXPq8=",
+  "Hash": "3RERbSm4xfAsYPj7ZsyqVlXpkY9W3HW4idvV4VYZYcM=",
   "Source": "EntertainSync",
   "BasePath": "_content/EntertainSync",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EntertainSync.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\css\\icones funcionado.txt",
+      "Identity": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\css\\icones preto branco pro colorido.txt",
       "SourceId": "EntertainSync",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\",
       "BasePath": "_content/EntertainSync",
-      "RelativePath": "css/icones funcionado.txt",
+      "RelativePath": "css/icones preto branco pro colorido.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +65,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\icones funcionado.txt"
+      "OriginalItemSpec": "wwwroot\\css\\icones preto branco pro colorido.txt"
     },
     {
       "Identity": "C:\\Users\\vicds\\OneDrive\\Área de Trabalho\\PROJETOS GIT\\EntertainSync\\wwwroot\\css\\site.css",

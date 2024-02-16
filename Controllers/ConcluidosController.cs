@@ -23,10 +23,7 @@ namespace EntertainSync.Controllers
             return View();
         }
 
-        public IActionResult Livros()
-        {
-            return View();
-        }
+  
 
         public IActionResult Index()
         {

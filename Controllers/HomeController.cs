@@ -17,6 +17,11 @@ namespace EntertainSync.Controllers
             repository = new EntertainSync.Repositories.ADO.SQLServer.HomeDAO(configuration.GetConnectionString(EntertainSync.Configurations.Appsettings.getKeyConnectionString()));
         }
 
+        public IActionResult Livros()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
