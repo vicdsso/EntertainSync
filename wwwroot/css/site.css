@@ -14,7 +14,7 @@
 }
 
     .icon img {
-        width: 50px; /* Ajuste o tamanho dos ícones conforme necessário */
+        width: 80px; 
         height: auto;
         filter: none; /* Mantendo as imagens coloridas inicialmente */
         transition: filter 0.3s; /* Adicionando uma transição suave para a mudança da imagem */
@@ -63,9 +63,10 @@ header {
 
 .alphabet-letter {
     cursor: pointer;
-    padding: 8px;
+    padding: 18px;
     border-radius: 5px;
     background-color: #333;
+    font-weight: 800;
 }
 
     .alphabet-letter:hover {
